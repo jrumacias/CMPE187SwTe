@@ -26,8 +26,7 @@ public class BST {
         addArrayList(list);
     }
 
-    public static void addArrayList(ArrayList<Integer> list)
-    {
+    public static void addArrayList(ArrayList<Integer> list) {
         /**
          * Add the arraylist to the tree
          *
@@ -70,8 +69,6 @@ public class BST {
          */
         return root.id;
     }
-
-
 
     public static boolean find(int id) {
         /**
@@ -275,8 +272,6 @@ public class BST {
             display(root.right);
         }
     }
-
-
 
     public int getValues(Node root) {
         /**

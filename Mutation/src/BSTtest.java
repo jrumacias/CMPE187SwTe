@@ -61,9 +61,7 @@ public class BSTtest {
         //Check that the first value entered into the tree (root) is the root node in the tree.
         assertEquals(randValues.get(0),(Integer) tree.getRootNodeValue());
     }
-
-
-
+    
     @Test
     public void find() {
         /**
@@ -104,12 +102,13 @@ public class BSTtest {
 
         //Get the size of the input data without duplicates
         int randValuesSize = randValuesWithoutDuplicates.size()-1;
-
+        System.out.println("randValuesSize: " + randValuesSize);
         //When An Item is deleted test the size
         for(int value: randValuesWithoutDuplicates)
         {
 
             tree.delete(value);
+//            randValuesSize -= 1;
             assertEquals(randValuesSize--, tree.getSize(tree.getRootNode()));
         }
 
@@ -128,10 +127,10 @@ public class BSTtest {
         BST tree = new BST(randValues);
 
         //Sort the random values so we know the least values from our test input data
-        Collections.sort(randValues);
+//        Collections.sort(randValues);
 
         //Check if the min value from our test values match the min value from the tree
-        assertEquals(randValues.get(0),(Integer) tree.minValue());
+        assertEquals(Collections.min(randValues),(Integer) tree.minValue());
     }
 
     @Test
@@ -218,8 +217,7 @@ public class BSTtest {
         return noDuplicates;
     }
 
-    private static ArrayList<Integer>oracle()
-    {
+    private static ArrayList<Integer>oracle() {
         /**
          * This is our test oracle.
          * It generates random values to test
@@ -227,18 +225,15 @@ public class BSTtest {
          * @return random values to test.
          */
         final int MAX = 20;
-        final int MIN = -10;
-        final int SIZE = 20;//number of random numbers
+        final int MIN = 0;
+        final int SIZE = 6;//number of random numbers
 
         ArrayList<Integer> values= generateRandomValues(SIZE,MAX,MIN);
 
         return values;
     }
 
-
-
-    public static ArrayList<Integer> generateRandomValues(int size, int max, int min)
-    {
+    public static ArrayList<Integer> generateRandomValues(int size, int max, int min) {
         /**
          * Generates random values and returns them as an arraylist
          *
@@ -260,9 +255,7 @@ public class BSTtest {
 
     }
 
-
-    private static void print(Object value)
-    {
+    private static void print(Object value) {
         /**
          * Prints Object values to the screen.
          *
@@ -272,8 +265,7 @@ public class BSTtest {
 
     }
 
-    private static void println(Object value)
-    {
+    private static void println(Object value) {
         /**
          * Prints Object values to the screen.
          *
