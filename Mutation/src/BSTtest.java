@@ -61,7 +61,7 @@ public class BSTtest {
         //Check that the first value entered into the tree (root) is the root node in the tree.
         assertEquals(randValues.get(0),(Integer) tree.getRootNodeValue());
     }
-    
+
     @Test
     public void find() {
         /**
@@ -108,6 +108,7 @@ public class BSTtest {
         {
 
             tree.delete(value);
+            System.out.println("Node deleted");
 //            randValuesSize -= 1;
             assertEquals(randValuesSize--, tree.getSize(tree.getRootNode()));
         }
@@ -149,49 +150,41 @@ public class BSTtest {
         BST tree = new BST();
 
 
-        ArrayList<Integer> noDuplicateValues = removeDuplicates(randValues);
+//        ArrayList<Integer> noDuplicateValues = removeDuplicates(randValues);
 
 
-        for(int value: randValues)
-        {
+        for(int value:removeDuplicates(randValues)) {
+            System.out.println("Inserting value: " + value);
             assertTrue(tree.insert(value));
         }
 
 
     }
 
-    @Test
-    public void display() {
-        /**
-         * Test the display method
-         *
-         * This does NOT WORK
-         */
-
-
-        ArrayList<Integer> randValues = oracle();
-
-        BST tree = new BST(randValues);
-
-        //Get the random values without duplicates. This will be compared with whats in the tree. Tree does not have duplicates
-        randValues = removeDuplicates(randValues);
-
-        //Sort the randValues so that we can compare with the output of the tree (tree should go from smallest to largest without duplicates)
-        Collections.sort(randValues);
-
-        String stringVal= randValues.toString();
-
-        String temp= "";
-        for(int i = 0; i < randValues.size();i++)
-        {
-
-            temp += " "+ randValues.get(i).toString();
-
-
-        }
-
-
-    }
+//    @Test
+//    public void display() {
+//        /**
+//         * Test the display method
+//         *
+//         * This does NOT WORK
+//         */
+//
+//
+//        ArrayList<Integer> randValues = oracle();
+//
+//        BST tree = new BST(randValues);
+//        tree.display(tree.getRootNode());
+//
+//        //Get the random values without duplicates. This will be compared with whats in the tree. Tree does not have duplicates
+//        randValues = removeDuplicates(randValues);
+//
+//        //Sort the randValues so that we can compare with the output of the tree (tree should go from smallest to largest without duplicates)
+//        Collections.sort(randValues);
+//        System.out.println();
+//        for (int value:randValues) {
+//            System.out.print(value + " ");
+//        }
+//    }
 
 
 

@@ -6,7 +6,7 @@ import java.util.ArrayList;
  *
  * found from: https://algorithms.tutorialhorizon.com/binary-search-tree-complete-implementation/
  *
- * Comments by Tyler Bruno
+ * Comments by Tyler Bruno, Juan Macias
  *
  * display(), getRootNode(), BST(list), addArrayList(), and getRootNodeValue() was created by Tyler Bruno
  */
@@ -213,7 +213,7 @@ public class BST {
         /**
          * inserts unique nodes into the binary tree
          *
-         * Modified by Tyler Bruno
+         * Modified by Tyler Bruno, Juan Macias
          *
          * @param id is the value of the node
          * @return void
@@ -229,7 +229,7 @@ public class BST {
         }
 
         //Find duplicates. If duplicated do not add to BST.
-        if(find(id)== true)
+        if(find(id))
         {
             return true;
         }
@@ -268,7 +268,7 @@ public class BST {
          */
         if (root != null) {
             display(root.left);
-            System.out.print(" " + root.id);
+            System.out.print(root.id + " ");
             display(root.right);
         }
     }
