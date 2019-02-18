@@ -102,13 +102,12 @@ public class BSTtest {
 
         //Get the size of the input data without duplicates
         int randValuesSize = randValuesWithoutDuplicates.size()-1;
-        System.out.println("randValuesSize: " + randValuesSize);
+//        System.out.println("randValuesSize: " + randValuesSize);
         //When An Item is deleted test the size
         for(int value: randValuesWithoutDuplicates)
         {
-
             tree.delete(value);
-            System.out.println("Node deleted");
+            System.out.println("Node " + value + " deleted");
 //            randValuesSize -= 1;
             assertEquals(randValuesSize--, tree.getSize(tree.getRootNode()));
         }
@@ -135,12 +134,6 @@ public class BSTtest {
     }
 
     @Test
-    public void getSuccessor() {
-
-
-    }
-
-    @Test
     public void insert() {
         /**
          * Test the insert method
@@ -160,32 +153,6 @@ public class BSTtest {
 
 
     }
-
-//    @Test
-//    public void display() {
-//        /**
-//         * Test the display method
-//         *
-//         * This does NOT WORK
-//         */
-//
-//
-//        ArrayList<Integer> randValues = oracle();
-//
-//        BST tree = new BST(randValues);
-//        tree.display(tree.getRootNode());
-//
-//        //Get the random values without duplicates. This will be compared with whats in the tree. Tree does not have duplicates
-//        randValues = removeDuplicates(randValues);
-//
-//        //Sort the randValues so that we can compare with the output of the tree (tree should go from smallest to largest without duplicates)
-//        Collections.sort(randValues);
-//        System.out.println();
-//        for (int value:randValues) {
-//            System.out.print(value + " ");
-//        }
-//    }
-
 
 
     private static ArrayList<Integer> removeDuplicates(ArrayList<Integer> list){
@@ -245,26 +212,6 @@ public class BSTtest {
         }
 
         return values;
-
-    }
-
-    private static void print(Object value) {
-        /**
-         * Prints Object values to the screen.
-         *
-         * @return void
-         */
-        System.out.print(value);
-
-    }
-
-    private static void println(Object value) {
-        /**
-         * Prints Object values to the screen.
-         *
-         * @return void
-         */
-        System.out.println(value);
 
     }
 }

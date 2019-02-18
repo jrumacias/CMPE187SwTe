@@ -62,7 +62,7 @@ public class BST {
 
     public int getRootNodeValue(){
         /**
-         * gets the root node valu
+         * gets the root node value
          *
          * @author Tyler Bruno
          * @return root node id
@@ -127,7 +127,7 @@ public class BST {
             if (current == root) {
                 root = null;
             }
-            if (isLeftChild == true) {
+            if (isLeftChild) {
                 parent.left = null;
             } else {
                 parent.right = null;
@@ -257,58 +257,5 @@ public class BST {
             }
         }
 
-    }
-
-    public void display(Node root) {
-        /**
-         * Displays the tree
-         *
-         * @param root is the root node
-         * @return void
-         */
-        if (root != null) {
-            display(root.left);
-            System.out.print(root.id + " ");
-            display(root.right);
-        }
-    }
-
-    public int getValues(Node root) {
-        /**
-         * Displays the tree
-         * THIS DOESNt WORK
-         * @param root is the root node
-         * @return void
-         */
-
-        if (root != null) {
-            getValues(root.left);
-
-            getValues(root.right);
-            return(root.id);
-        }
-        else {
-            return -999;
-        }
-
-    }
-
-    public void display(){
-        /**
-         *
-         * @author Tyler Bruno
-         *
-         * displays all the nodes in the tree
-         *
-         * @return void
-         */
-//        System.out.println("Root = " + root.id);
-        if(root != null)
-        {
-            display(root.left);
-            System.out.print(" " + root.id);
-            display(root.right);
-        }
-        System.out.println("");
     }
 }
