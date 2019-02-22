@@ -14,8 +14,7 @@ public class Progress {
             int rise = x;
             int run = y;
             int slope = rise / run;
-            double checkAngle = Math.toDegrees(Math.atan((slope)));
-            double checkRadians = ((Math.PI / 180) * (checkAngle));
+            double checkRadians = Math.atan(slope); // Add 0 degrees since QI
             if (checkRadians <= completedRadians) {
                 return "RED, QI";
             }
