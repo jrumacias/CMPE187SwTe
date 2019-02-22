@@ -1,3 +1,12 @@
+/**
+ * Progress Circle
+ *
+ * Original code written by: Juan Macias
+ * San Jose State University
+ * Spring 2019
+ * CMPE187: Software Testing
+ */
+
 public class Progress {
 
     public static String getProgress(double P, int x, int y) {
