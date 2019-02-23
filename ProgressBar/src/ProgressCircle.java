@@ -93,10 +93,10 @@ public class ProgressCircle {
 
         return "BLUE";
     }
-
-    public static void main(String[] args) {
-        ProgressCircle testProgress = new ProgressCircle(100, 5, 40);
-
-        System.out.println(testProgress.getProgress(testProgress.P, testProgress.x, testProgress.y));
-    }
+//
+//    public static void main(String[] args) {
+//        ProgressCircle testProgress = new ProgressCircle(100, 5, 40);
+//
+//        System.out.println(testProgress.getProgress(testProgress.P, testProgress.x, testProgress.y));
+//    }
 }
