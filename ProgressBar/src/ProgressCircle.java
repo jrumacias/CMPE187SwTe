@@ -40,9 +40,9 @@ public class ProgressCircle {
         y: 50-100, run
          */
         if ((x >= 50 && x <= 100) && (y >= 50 && y <= 100)) {
-            int rise = x;
-            int run = y;
-            int slope = rise / run;
+            double rise = x;
+            double run = y;
+            double slope = rise / run;
             double checkRadians = Math.atan(slope); // Add 0 degrees since QI
             if (checkRadians <= completedRadians) {
                 return "RED, QI";
@@ -52,11 +52,11 @@ public class ProgressCircle {
 
         /*  QUADRANT II
         x: 50-100, run
-        y: 0-50, rise
+        y: 0-49, rise
          */
         if ((x >= 50 && x <= 100) && (y >= 0 && y <= 49)) {
             double rise = 50 - y;
-            double run = 50 - x;
+            double run = x - 49;
             double slope = rise / run;
             double checkRadians = Math.atan(slope) + 1.5708; // Add 90 degrees since QII
             if (checkRadians <= completedRadians) {
@@ -69,9 +69,9 @@ public class ProgressCircle {
         y: 0-50, run
          */
         if ((x >= 0 && x <= 49) && (y >= 0 && y <= 49)) {
-            int rise = 50 - x;
-            int run = 50 - y;
-            int slope = rise / run;
+            double rise = 50 - x;
+            double run = 50 - y;
+            double slope = rise / run;
             double checkRadians = Math.atan(slope) + 3.14159; // Add 180 degrees since QIII
             if (checkRadians <= completedRadians) {
                 return "RED, QIII";
@@ -82,9 +82,9 @@ public class ProgressCircle {
         x: 0-50, run
         y: 50-100, rise */
         if ((x >= 0 && x <= 49) && (y >= 50 && y <= 100)) {
-            int rise = y;
-            int run = x;
-            int slope = rise / run;
+            double rise = y;
+            double run = x;
+            double slope = rise / run;
             double checkRadians = Math.atan(slope) + 4.71239; // Add 270 degrees since QIV
             if (checkRadians <= completedRadians) {
                 return "RED, QIV";
