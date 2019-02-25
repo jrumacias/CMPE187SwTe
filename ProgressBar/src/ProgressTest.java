@@ -7,7 +7,7 @@ import static org.junit.Assert.*;
 
 /**
  * ProgressCircle Circle Unit Test
- * 
+ *
  * Original code written by: Juan Macias
  * San Jose State University
  * Spring 2019
@@ -25,15 +25,19 @@ public class ProgressTest {
          * Checks that "hits" in QI are detected properly
          */
 
+        System.out.println("== QUADRANT I: HIT TEST ==");
         final int NUM_COORDS = 10;
         ArrayList<Integer> randXValues = oracle(50, 100, NUM_COORDS);
         ArrayList<Integer> randYValues = oracle(50, 100, NUM_COORDS);
 
         for (int i = 0; i < NUM_COORDS; i++) {
             ProgressCircle currentProgressCircle = new ProgressCircle(25, randXValues.get(i), randYValues.get(i));
+            System.out.println("Cirlce is 25% complete. Testing coordinates (x: "
+                    + randXValues.get(i) + ",\ty: " + randYValues.get(i) + ")...");
             assertEquals("RED, QI", currentProgressCircle.getProgress(currentProgressCircle.P,
                     currentProgressCircle.x, currentProgressCircle.y));
         }
+        System.out.println("Test complete.\n");
     }
 
     @Test
@@ -42,15 +46,19 @@ public class ProgressTest {
          * Checks that "misses" in QI are detected properly
          */
 
+        System.out.println("== QUADRANT I: MISS TEST ==");
         final int NUM_COORDS = 10;
         ArrayList<Integer> randXValues = oracle(50, 100, NUM_COORDS);
         ArrayList<Integer> randYValues = oracle(50, 100, NUM_COORDS);
 
         for (int i = 0; i < NUM_COORDS; i++) {
             ProgressCircle currentProgressCircle = new ProgressCircle(0, randXValues.get(i), randYValues.get(i));
+            System.out.println("Cirlce is 0% complete. Testing coordinates (x: "
+                    + randXValues.get(i) + ",\ty: " + randYValues.get(i) + ")...");
             assertEquals("BLUE", currentProgressCircle.getProgress(currentProgressCircle.P,
                     currentProgressCircle.x, currentProgressCircle.y));
         }
+        System.out.println("Test complete.\n");
     }
 
     @Test
@@ -59,6 +67,7 @@ public class ProgressTest {
          * Checks that "hits" in QII are detected properly
          */
 
+        System.out.println("== QUADRANT II: HIT TEST ==");
         final int NUM_COORDS = 10;
         ArrayList<Integer> randXValues = oracle(50, 100, NUM_COORDS);
         ArrayList<Integer> randYValues = oracle(0, 49, NUM_COORDS);
@@ -70,32 +79,37 @@ public class ProgressTest {
             assertEquals("RED, QII", currentProgressCircle.getProgress(currentProgressCircle.P,
                     currentProgressCircle.x, currentProgressCircle.y));
         }
-        System.out.println("Test complete.");
+        System.out.println("Test complete.\n");
     }
 
     @Test
     public void quadrantTwoMiss() {
         /**
-         * Checks that "misses" in QI are detected properly
+         * Checks that "misses" in QII are detected properly
          */
 
+        System.out.println("== QUADRANT II: MISS TEST ==");
         final int NUM_COORDS = 10;
         ArrayList<Integer> randXValues = oracle(50, 100, NUM_COORDS);
         ArrayList<Integer> randYValues = oracle(0, 49, NUM_COORDS);
 
         for (int i = 0; i < NUM_COORDS; i++) {
             ProgressCircle currentProgressCircle = new ProgressCircle(25, randXValues.get(i), randYValues.get(i));
+            System.out.println("Cirlce is 25% complete. Testing coordinates (x: "
+                    + randXValues.get(i) + ",\ty: " + randYValues.get(i) + ")...");
             assertEquals("BLUE", currentProgressCircle.getProgress(currentProgressCircle.P,
                     currentProgressCircle.x, currentProgressCircle.y));
         }
+        System.out.println("Test complete.\n");
     }
 
     @Test
     public void quadrantThreeHit() {
         /**
-         * Checks that "hits" in QII are detected properly
+         * Checks that "hits" in QIII are detected properly
          */
 
+        System.out.println("== QUADRANT III: HIT TEST ==");
         final int NUM_COORDS = 10;
         ArrayList<Integer> randXValues = oracle(0, 49, NUM_COORDS);
         ArrayList<Integer> randYValues = oracle(0, 49, NUM_COORDS);
@@ -107,15 +121,16 @@ public class ProgressTest {
             assertEquals("RED, QIII", currentProgressCircle.getProgress(currentProgressCircle.P,
                     currentProgressCircle.x, currentProgressCircle.y));
         }
-        System.out.println("Test complete.");
+        System.out.println("Test complete.\n");
     }
 
     @Test
     public void quadrantThreeMiss() {
         /**
-         * Checks that "misses" in QI are detected properly
+         * Checks that "misses" in QIII are detected properly
          */
 
+        System.out.println("== QUADRANT III: MISS TEST ==");
         final int NUM_COORDS = 10;
         ArrayList<Integer> randXValues = oracle(0, 49, NUM_COORDS);
         ArrayList<Integer> randYValues = oracle(0, 49, NUM_COORDS);
@@ -127,15 +142,16 @@ public class ProgressTest {
             assertEquals("BLUE", currentProgressCircle.getProgress(currentProgressCircle.P,
                     currentProgressCircle.x, currentProgressCircle.y));
         }
-        System.out.println("Test complete.");
+        System.out.println("Test complete.\n");
     }
 
     @Test
     public void quadrantFourHit() {
         /**
-         * Checks that "hits" in QII are detected properly
+         * Checks that "hits" in QIV are detected properly
          */
 
+        System.out.println("== QUADRANT IV: HIT TEST ==");
         final int NUM_COORDS = 10;
         ArrayList<Integer> randXValues = oracle(0, 49, NUM_COORDS);
         ArrayList<Integer> randYValues = oracle(50, 100, NUM_COORDS);
@@ -147,15 +163,16 @@ public class ProgressTest {
             assertEquals("RED, QIV", currentProgressCircle.getProgress(currentProgressCircle.P,
                     currentProgressCircle.x, currentProgressCircle.y));
         }
-        System.out.println("Test complete.");
+        System.out.println("Test complete.\n");
     }
 
     @Test
     public void quadrantFourMiss() {
         /**
-         * Checks that "misses" in QI are detected properly
+         * Checks that "misses" in QIV are detected properly
          */
 
+        System.out.println("== QUADRANT IV: MISS TEST ==");
         final int NUM_COORDS = 10;
         ArrayList<Integer> randXValues = oracle(0, 49, NUM_COORDS);
         ArrayList<Integer> randYValues = oracle(50, 100, NUM_COORDS);
@@ -167,7 +184,7 @@ public class ProgressTest {
             assertEquals("BLUE", currentProgressCircle.getProgress(currentProgressCircle.P,
                     currentProgressCircle.x, currentProgressCircle.y));
         }
-        System.out.println("Test complete.");
+        System.out.println("Test complete.\n");
     }
 
 
