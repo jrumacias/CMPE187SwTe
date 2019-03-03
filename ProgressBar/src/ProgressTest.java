@@ -32,7 +32,7 @@ public class ProgressTest {
 
         for (int i = 0; i < NUM_COORDS; i++) {
             ProgressCircle currentProgressCircle = new ProgressCircle(25, randXValues.get(i), randYValues.get(i));
-            System.out.println("Cirlce is 25% complete. Testing coordinates (x: "
+            System.out.println("Set " + (i+1) + ": Cirlce is 25% complete. Testing coordinates (x: "
                     + randXValues.get(i) + ",\ty: " + randYValues.get(i) + ")...");
             assertEquals("RED, QI", currentProgressCircle.getProgress(currentProgressCircle.P,
                     currentProgressCircle.x, currentProgressCircle.y));
@@ -53,7 +53,7 @@ public class ProgressTest {
 
         for (int i = 0; i < NUM_COORDS; i++) {
             ProgressCircle currentProgressCircle = new ProgressCircle(0, randXValues.get(i), randYValues.get(i));
-            System.out.println("Cirlce is 0% complete. Testing coordinates (x: "
+            System.out.println("Set " + (i+1) + ": Cirlce is 0% complete. Testing coordinates (x: "
                     + randXValues.get(i) + ",\ty: " + randYValues.get(i) + ")...");
             assertEquals("BLUE", currentProgressCircle.getProgress(currentProgressCircle.P,
                     currentProgressCircle.x, currentProgressCircle.y));
@@ -74,7 +74,7 @@ public class ProgressTest {
 
         for (int i = 0; i < NUM_COORDS; i++) {
             ProgressCircle currentProgressCircle = new ProgressCircle(50, randXValues.get(i), randYValues.get(i));
-            System.out.println("Cirlce is 50% complete. Testing coordinates (x: "
+            System.out.println("Set " + (i+1) + ": Cirlce is 50% complete. Testing coordinates (x: "
                     + randXValues.get(i) + ",\ty: " + randYValues.get(i) + ")...");
             assertEquals("RED, QII", currentProgressCircle.getProgress(currentProgressCircle.P,
                     currentProgressCircle.x, currentProgressCircle.y));
@@ -95,7 +95,7 @@ public class ProgressTest {
 
         for (int i = 0; i < NUM_COORDS; i++) {
             ProgressCircle currentProgressCircle = new ProgressCircle(25, randXValues.get(i), randYValues.get(i));
-            System.out.println("Cirlce is 25% complete. Testing coordinates (x: "
+            System.out.println("Set " + (i+1) + ": Cirlce is 25% complete. Testing coordinates (x: "
                     + randXValues.get(i) + ",\ty: " + randYValues.get(i) + ")...");
             assertEquals("BLUE", currentProgressCircle.getProgress(currentProgressCircle.P,
                     currentProgressCircle.x, currentProgressCircle.y));
@@ -116,7 +116,7 @@ public class ProgressTest {
 
         for (int i = 0; i < NUM_COORDS; i++) {
             ProgressCircle currentProgressCircle = new ProgressCircle(75, randXValues.get(i), randYValues.get(i));
-            System.out.println("Cirlce is 75% complete. Testing coordinates (x: "
+            System.out.println("Set " + (i+1) + ": Cirlce is 75% complete. Testing coordinates (x: "
                     + randXValues.get(i) + ",\ty: " + randYValues.get(i) + ")...");
             assertEquals("RED, QIII", currentProgressCircle.getProgress(currentProgressCircle.P,
                     currentProgressCircle.x, currentProgressCircle.y));
@@ -137,7 +137,7 @@ public class ProgressTest {
 
         for (int i = 0; i < NUM_COORDS; i++) {
             ProgressCircle currentProgressCircle = new ProgressCircle(50, randXValues.get(i), randYValues.get(i));
-            System.out.println("Cirlce is 50% complete. Testing coordinates (x: "
+            System.out.println("Set " + (i+1) + ": Cirlce is 50% complete. Testing coordinates (x: "
                     + randXValues.get(i) + ",\ty: " + randYValues.get(i) + ")...");
             assertEquals("BLUE", currentProgressCircle.getProgress(currentProgressCircle.P,
                     currentProgressCircle.x, currentProgressCircle.y));
@@ -158,7 +158,7 @@ public class ProgressTest {
 
         for (int i = 0; i < NUM_COORDS; i++) {
             ProgressCircle currentProgressCircle = new ProgressCircle(100, randXValues.get(i), randYValues.get(i));
-            System.out.println("Cirlce is 100% complete. Testing coordinates (x: "
+            System.out.println("Set " + (i+1) + ": Cirlce is 100% complete. Testing coordinates (x: "
                     + randXValues.get(i) + ",\ty: " + randYValues.get(i) + ")...");
             assertEquals("RED, QIV", currentProgressCircle.getProgress(currentProgressCircle.P,
                     currentProgressCircle.x, currentProgressCircle.y));
@@ -179,14 +179,13 @@ public class ProgressTest {
 
         for (int i = 0; i < NUM_COORDS; i++) {
             ProgressCircle currentProgressCircle = new ProgressCircle(75, randXValues.get(i), randYValues.get(i));
-            System.out.println("Cirlce is 75% complete. Testing coordinates (x: "
+            System.out.println("Set " + (i+1) + ": Cirlce is 75% complete. Testing coordinates (x: "
                     + randXValues.get(i) + ",\ty: " + randYValues.get(i) + ")...");
             assertEquals("BLUE", currentProgressCircle.getProgress(currentProgressCircle.P,
                     currentProgressCircle.x, currentProgressCircle.y));
         }
         System.out.println("Test complete.\n");
     }
-
 
 
     // Set up testing environment
