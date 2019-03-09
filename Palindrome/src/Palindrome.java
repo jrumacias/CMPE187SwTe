@@ -1,3 +1,15 @@
+/**
+ * Palindrome
+ *
+ * Original code written by: Juan Macias
+ * San Jose State University
+ * Spring 2019
+ * CMPE187: Software Testing
+ *
+ * NOTES
+ */
+
+
 public class Palindrome {
     private boolean isPalindrome;
     private int length;
@@ -9,27 +21,22 @@ public class Palindrome {
         this.phrase = phrase;
     }
 
-    public static void palindromeCheck(Palindrome p) {
+    public boolean palindromeCheck() {
         // Remove non alphanumeric characters from string and convert to lowercase
-        p.phrase = p.phrase.replaceAll("[^a-zA-Z0-9]", "");
-        p.phrase = p.phrase.toLowerCase();
+        this.phrase = this.phrase.replaceAll("[^a-zA-Z0-9]", "");
+        this.phrase = this.phrase.toLowerCase();
 
         int p1 = 0;
-        int p2 = p.phrase.length()-1;
+        int p2 = this.phrase.length()-1;
 
         while (p1 < p2) {
-            if (p.phrase.charAt(p1) != p.phrase.charAt(p2)) {
-                p.isPalindrome =  false;
+            if (this.phrase.charAt(p1) != this.phrase.charAt(p2)) {
+                this.isPalindrome =  false;
             }
             p1++;
             p2--;
         }
+        return this.isPalindrome;
     }
 
-    public static void main(String[] args) {
-        Palindrome testPalindrome = new Palindrome("A man, a plan, a canal: Panama");
-
-        System.out.println(testPalindrome.isPalindrome);
-        System.out.println(testPalindrome.length);
-    }
 }
