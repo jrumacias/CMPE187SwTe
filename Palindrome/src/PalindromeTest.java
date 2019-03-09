@@ -52,6 +52,21 @@ public class PalindromeTest {
 
     }
 
+    @Test
+    public void palindromeLength() throws IOException {
+        /**
+         * Checks that valied palindromes are properly flagged as true
+         */
+        ArrayList<String> validPhrases = oracle("valid_pals.txt");
+
+        for (int i = 0; i < validPhrases.size(); i++) {
+//            System.out.println("Testing phrase: " + validPhrases.get(i));
+            Palindrome currentPalindrome = new Palindrome(validPhrases.get(i));
+            assertEquals(validPhrases.get(i).length(), currentPalindrome.getLength());
+        }
+
+    }
+
     // SET UP TESTING ENVIRONMENT
 
     private static ArrayList<String> oracle(String f) throws IOException {
@@ -64,7 +79,7 @@ public class PalindromeTest {
         String rootPath = "/Users/jmacias/IdeaProjects/CMPE187SwTe/Palindrome/";
 
         String file = rootPath + f;
-        System.out.println(f);
+//        System.out.println(f);
 
         ArrayList<String> validPhrases = new ArrayList<>();
 

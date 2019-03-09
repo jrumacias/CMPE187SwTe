@@ -13,12 +13,14 @@
 public class Palindrome {
     private boolean isPalindrome;
     private int length;
+    private int strippedLength;
     private String phrase;
 
     public Palindrome(String phrase) {
         this.isPalindrome = true;
-        this.length = phrase.replaceAll("[^a-zA-Z0-9]", "").toLowerCase().length();
+        this.strippedLength = phrase.replaceAll("[^a-zA-Z0-9]", "").toLowerCase().length();
         this.phrase = phrase;
+        this.length = phrase.length();
     }
 
     public boolean palindromeCheck() {
@@ -37,6 +39,10 @@ public class Palindrome {
             p2--;
         }
         return this.isPalindrome;
+    }
+
+    public int getLength() {
+        return this.length;
     }
 
 }
