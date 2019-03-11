@@ -2,10 +2,8 @@ import org.junit.Test;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
-import java.io.IOError;
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Random;
 
 import static org.junit.Assert.*;
 
@@ -18,7 +16,12 @@ import static org.junit.Assert.*;
  * CMPE187: Software Testing
  *
  * This class unit tests Palindrome.java.
- * In order to run assertions you must have JUnit 4 added to the classpath.
+ * In order to run assertions you must have:
+ *          - JUnit 4 added to the classpath.
+ *          - invalid_pals.txt and valid_pals.txt
+ *          - proper paths to the containing folder of both of the above text
+ *            files listed in variable "rootPath" on line 81 of this file
+ *
  */
 
 public class PalindromeTest {
@@ -26,7 +29,7 @@ public class PalindromeTest {
     @Test
     public void truePalindrome() throws IOException {
         /**
-         * Checks that valied palindromes are properly flagged as true
+         * Checks that valid palindromes are properly flagged as true
          */
         ArrayList<String> validPhrases = oracle("valid_pals.txt");
 
@@ -55,7 +58,7 @@ public class PalindromeTest {
     @Test
     public void palindromeLength() throws IOException {
         /**
-         * Checks that valied palindromes are properly flagged as true
+         * Checks that the length of the phrase matches the expected length
          */
         ArrayList<String> validPhrases = oracle("valid_pals.txt");
 

@@ -7,6 +7,9 @@
  * CMPE187: Software Testing
  *
  * NOTES
+ *  The following code:
+ *      - Assumes palindromes to be valid for all alphanumeric combinations
+ *      - Strips whitespace and non-alphanumeric characters from the input phrase
  */
 
 
