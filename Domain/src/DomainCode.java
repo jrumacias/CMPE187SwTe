@@ -7,7 +7,7 @@ public class DomainCode {
             d = c - (x % 2);
         } else d = c + (x % 3);    //OFF point open
             
-        if(d >= c * 2) {            //ON point closed
+        if(d >= y * 2) {            //ON point closed
             k = x + (d * 2);
         } else k = y + (d / 4);     //ON point open
 
