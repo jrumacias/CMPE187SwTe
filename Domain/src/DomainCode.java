@@ -4,8 +4,8 @@ public class DomainCode {
         int c, d, k;
         c = x * x;
         if(c > 25) {                //OFF point closed
-            d = c - (x % 2);
-        } else d = c + (x % 3);    //OFF point open
+            d = c - (x / 4);
+        } else d = c + (x / 4);    //OFF point open
             
         if(d >= y * 2) {            //ON point closed
             k = x + (d * 2);
