@@ -2,7 +2,7 @@ public class DomainCode {
 
     public static int codeDomain(int x, int y){
         int c, d, k;
-        c = x * x;
+        c = (x * x) - y;
         if(c > 25) {                //OFF point closed
             d = c - (x / 4);
         } else d = c + (x / 4);     //OFF point open
