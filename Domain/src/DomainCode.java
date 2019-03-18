@@ -23,17 +23,26 @@ public class DomainCode {
         if(c > 25) {
 //            4. Branch P1 = True
             d = c - (x / 4);
-        } else d = c + (x / 4); // 5. Branch P1 = False
+            System.out.println("P1: True");
+        }
+        else {
+            d = c + (x / 3); // 5. Branch P1 = False
+            System.out.println("P1: False");
+        }
 //        6. P2
-        if(d >= c - 3) {
+        if(d >= c + 3) {
 //            7. Branch P2 = True
             k = x + (d * 2);
-        } else k = y + (d / 4); // 8. Branch P2 = False
+            System.out.println("P2: True");
+        } else {
+            k = y + (d / 4); // 8. Branch P2 = False
+            System.out.println("P2 False");
+        }
 //        9. Return Statement
         return(k);
     }
 
     public static void main(String[] args) {
-        System.out.println(codeDomain(5, 2));
+        System.out.println(codeDomain(0, -50));
     }
 }
